@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poutine au poulet croustillant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Saira Condensed", sans-serif;
+            font-weight: 200;
+            font-style: normal;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            overflow-x: hidden;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        main {
+           
+            text-align: justify;
+            animation: fadeIn 1s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            font-style: italic;
+        }
+        .recipe-banner {
+            width: 100%;
+            height: 50vh;
+            background-image: url('https://www.tourismetroisrivieres.com/Fichiers/a2fcfb95-f9fc-e611-80f8-00155d09650f/Entities/m_4f9276fb-fdfc-e611-80f8-00155d09650f/Images/bravo-vf.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            margin-bottom: 30px;
+            animation: zoomIn 1s ease-in;
+        }
+        @keyframes zoomIn {
+            from { transform: scale(1.1); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .recipe-title {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 36px;
+            color: #e65100;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: slideInRight 1s ease-in;
+        }
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .recipe-introduction {
+            margin-top: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+            animation: fadeInUp 1s ease-in;
+            padding: 2rem;
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .recipe-ingredients {
+            margin-top: 30px;
+            font-size: 18px;
+            list-style-type: none;
+            padding: 0;
+            animation: fadeIn 1s ease-in;
+            padding: 2rem;
+        }
+        .recipe-ingredients li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .recipe-ingredients li::before {
+            content: '';
+            width: 10px;
+            height: 10px;
+            background-color: #e65100;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .recipe-instructions {
+            margin-top: 30px;
+            font-size: 18px;
+            list-style-type: decimal;
+            padding-left: 20px;
+            animation: fadeIn 1s ease-in;
+            padding: 2rem 4rem;
+        }
+        .contact-form {
+            background-color: #f0c4b7;
+
+            padding: 2rem;
+            text-align: center;
+            animation: slideInLeft 1s ease-in;
+        }
+
+        .contact-form form{
+            max-width: 40rem;
+            margin: 3rem auto;
+        }
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+        .contact-form h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #e65100;
+        }
+        .contact-form input, .contact-form textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .contact-form button {
+            background-color: #e65100;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: #ff7043;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Crispy Chicken Poutine</h1>
+    </header>
+    <div class="recipe-banner"></div>
+    <main>
+        <div class="recipe-title">Introduction</div>
+        <p class="recipe-introduction">Crispy Chicken Poutine is a delicious variation of the classic Quebecois poutine recipe. It perfectly combines the crispiness of chicken with the smoothness of cheese curds and savory brown gravy.</p>
+        
+        <div class="recipe-title">Ingredients</div>
+        <ul class="recipe-ingredients">
+            <li>Yukon Gold potatoes, cut into fries</li>
+            <li>Chicken breasts, cut into pieces</li>
+            <li>Fresh cheese curds</li>
+            <li>Brown gravy</li>
+            <li>Flour</li>
+            <li>Beaten egg</li>
+            <li>Panko breadcrumbs</li>
+            <li>Salt and pepper to taste</li>
+            <li>Frying oil</li>
+        </ul>
+        
+        <div class="recipe-title">Preparation</div>
+        <ol class="recipe-instructions">
+            <li>Preheat your frying oil to 180°C.</li>
+            <li>Season chicken pieces with salt and pepper. Coat them in flour, then dip them in beaten egg and finally in panko breadcrumbs.</li>
+            <li>Fry the chicken pieces until golden and crispy. Drain them on paper towels.</li>
+            <li>Fry the potato fries until golden and crispy. Also drain them on paper towels.</li>
+            <li>In individual bowls, distribute cooked potato fries, crispy chicken pieces, and cheese curds. Pour hot brown gravy over them.</li>
+            <li>Serve immediately and enjoy this delicious Crispy Chicken Poutine!</li>
+        </ol>
+        
+        <div class="contact-form">
+            <h2>Contact Me</h2>
+            <form action="#">
+                <input type="text" placeholder="Name" required><br>
+                <input type="tel" placeholder="Phone" required><br>
+                <input type="email" placeholder="Email" required><br>
+                <textarea placeholder="Message" rows="4" required></textarea><br>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </main>
+    <footer>
+        Recipe provided by Esaie Bowa - All rights reserved<br>
+        Phone: 8928838483 | Email: bowaesaie@gmail.com
+    </footer>
+    
+</body>
+</html>
